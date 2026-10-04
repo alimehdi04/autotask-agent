@@ -5,7 +5,7 @@ export default function InvoicesPage() {
     const [invoices, setInvoices] = useState<any[]>([]);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/invoices")
+        fetch("https://autotask-agent-tzep.onrender.com/invoices")
             .then((res) => res.json())
             .then((data) => setInvoices(data.data));
     }, []);

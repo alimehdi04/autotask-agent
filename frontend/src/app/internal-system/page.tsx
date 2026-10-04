@@ -14,7 +14,7 @@ export default function InternalSystemPage() {
             due_date: formData.get("due_date"),
         };
 
-        const res = await fetch("http://127.0.0.1:8000/internal-system", {
+        const res = await fetch("https://autotask-agent-tzep.onrender.com/internal-system", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
@@ -89,8 +89,8 @@ export default function InternalSystemPage() {
                 <div
                     id="status-message"
                     className={`mt-6 p-4 rounded w-full max-w-md text-center font-medium ${message.includes("Error")
-                            ? "bg-red-900/50 text-red-400"
-                            : "bg-green-900/50 text-green-400"
+                        ? "bg-red-900/50 text-red-400"
+                        : "bg-green-900/50 text-green-400"
                         }`}
                 >
                     {message}
