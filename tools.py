@@ -8,8 +8,8 @@ from playwright.sync_api import sync_playwright
 # Load environment variables
 load_dotenv()
 
-BASE_API_URL = "http://127.0.0.1:8000"
-FRONTEND_URL = "http://localhost:3000"
+BASE_API_URL = "https://autotask-agent-tzep.onrender.com"
+FRONTEND_URL = "https://autotask-agent.vercel.app"
 
 @tool
 def fetch_invoices() -> str:
